@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:reliance_demo/1Eypage.dart';
-import 'package:reliance_demo/6thpage.dart';
 
 import 'healthquestion.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
@@ -29,6 +28,8 @@ class _Face_PosState extends State<Face_Pos> {
   bool? check1 = false;
   bool? check2 = false;
   bool? check3 = false;
+  bool? check4 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,10 +123,10 @@ class _Face_PosState extends State<Face_Pos> {
               Row(
                 children: [
                   Checkbox(
-                    value: detailsRadio,
+                    value: check2,
                     onChanged: (value) {
                       setState(() {
-                        detailsRadio = value!;
+                        check2 = value!;
                       });
                     },
                   ),
@@ -143,10 +144,10 @@ class _Face_PosState extends State<Face_Pos> {
               Row(
                 children: [
                   Checkbox(
-                    value: detailsRadio,
+                    value: check3,
                     onChanged: (value) {
                       setState(() {
-                        detailsRadio = value!;
+                        check3 = value!;
                       });
                     },
                   ),
@@ -166,22 +167,43 @@ class _Face_PosState extends State<Face_Pos> {
               Row(
                 children: [
                   Checkbox(
-                    value: detailsRadio,
+                    value: check1,
                     onChanged: (value) {
                       setState(() {
-                        detailsRadio = value!;
+                        check1 = value!;
                       });
                     },
                   ),
                   const SizedBox(width: 10),
                   const Text(
-                    "Video Consent Recording Dear Customer ,Please go through the policy term and condition in your policy Docume....Read More",
+                    "Video Consent Recording ",
                     style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
+              ),
+              const Text(
+                "          Dear Customer ,Please go through the",
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const Text(
+                "          policy term and condition in your policy",
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const Text(
+                "          Docume....Read More",
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
               const SizedBox(height: 20),
               Center(

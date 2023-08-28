@@ -3,6 +3,7 @@ import 'package:reliance_demo/tp.dart';
 
 import '1Eypage.dart';
 import '5thpage.dart';
+import 'Pimage.dart';
 import 'main.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/approval.dart';
@@ -220,7 +221,7 @@ class _IncomeVerificationState extends State<IncomeVerification> {
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         leading: Radio(
-                          value: "E-Statements",
+                          value: "Manual-fill",
                           groupValue: consent,
                           onChanged: (value) {
                             setState(() {
@@ -289,7 +290,7 @@ class _IncomeVerificationState extends State<IncomeVerification> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => EY_Page(),
+                              builder: (context) => P_Image(),
                             ));
 
                         // showModalBottomSheet<void>(

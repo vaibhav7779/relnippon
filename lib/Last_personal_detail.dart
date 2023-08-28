@@ -1,37 +1,34 @@
 import 'package:flutter/material.dart';
 
 import '1Eypage.dart';
-import '5thpage.dart';
-import 'Quote_Generation.dart';
+import 'Pimage.dart';
+// import 'package:reliance_demo/1Eypage.dart';
+// import 'package:sar/pages/income_verification.dart';
+// import 'package:sar/pages/add_income_proof.dart';
+// import 'package:sar/pages/income_verification.dart';
+// import 'package:sar/pages/income_verification.dart';
+// import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 bool isChecked = false;
 
-class P_Detail extends StatefulWidget {
-  const P_Detail({super.key});
+class Last_P_Detail extends StatefulWidget {
+  const Last_P_Detail({super.key});
 
   @override
-  State<P_Detail> createState() => _P_DetailState();
+  State<Last_P_Detail> createState() => _Last_P_DetailState();
 }
 
-String? consent;
 String cardSel = 'agent';
+String? consent;
+String dropdownIncome = 'Bachelors';
+String dropdownComp = 'Yes';
 
-bool detailsRadio = false;
-bool temrsRadio = false;
-
-class _P_DetailState extends State<P_Detail> {
-  String dropdownIncome = 'No';
-  String dropdownComp = 'Yes';
-
+class _Last_P_DetailState extends State<Last_P_Detail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 18, 24, 214),
-        title: const Text(
-          "Personal Detail",
-          style: TextStyle(color: Colors.white),
-        ),
+        title: const Text("Personal Details"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -61,14 +58,12 @@ class _P_DetailState extends State<P_Detail> {
                 ),
               ),
               const SizedBox(height: 20),
-              const Text(
-                "Hi, Vishal",
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
+              ListTile(
+                title: const Text(
+                  'Hi, Vishal!',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
-              const SizedBox(height: 20),
               Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -79,20 +74,20 @@ class _P_DetailState extends State<P_Detail> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const Text(
-                        "Kindly provide your personal detail ",
+                      Text(
+                        "kindly provide your personal detail",
                         style: const TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w400),
+                            fontSize: 14, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "vishal Bharadwaj",
+                        initialValue: "Vishal Bharadwaj",
                         decoration: const InputDecoration(
                           labelText: "Name",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
+                          fillColor: Colors.white,
                         ),
                         readOnly: true,
                       ),
@@ -104,19 +99,19 @@ class _P_DetailState extends State<P_Detail> {
                           labelText: "Email Address",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
+                          fillColor: Colors.white,
                         ),
                         readOnly: true,
                       ),
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "+91 9876543210",
+                        initialValue: "+91 9876523986",
                         decoration: const InputDecoration(
                           labelText: "Mobile Number",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
+                          fillColor: Colors.white,
                         ),
                         readOnly: true,
                       ),
@@ -219,16 +214,16 @@ class _P_DetailState extends State<P_Detail> {
                           labelText: "DOB",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
+                          fillColor: Colors.white,
                         ),
                         readOnly: true,
                       ),
                       const SizedBox(height: 20),
-                      const Text(
-                        "Tobacco Consumption ",
-                        style: const TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w400,
+                      ListTile(
+                        title: const Text(
+                          'Tabacco Consumption',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w500),
                         ),
                       ),
                       Row(
@@ -268,20 +263,42 @@ class _P_DetailState extends State<P_Detail> {
                         ],
                       ),
                       const SizedBox(height: 20),
-                      TextFormField(
-                        autofocus: false,
-                        initialValue: "bachelore",
+                      DropdownButtonFormField(
                         decoration: const InputDecoration(
-                          labelText: "Education Qualification",
-                          border: OutlineInputBorder(),
-                          filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
-                          suffixIcon: Icon(
-                            Icons.arrow_drop_down,
-                            color: Color.fromRGBO(14, 48, 170, 1),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderSide:
+                                BorderSide(color: Colors.black, width: 1),
                           ),
+                          contentPadding: EdgeInsets.fromLTRB(10, 18, 10, 18),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.black, width: 1),
+                          ),
+                          filled: false,
+                          fillColor: Colors.white,
+                          labelText: 'Income Type',
+                          labelStyle: TextStyle(color: Colors.grey),
                         ),
-                        readOnly: true,
+                        iconEnabledColor: Color.fromARGB(255, 20, 31, 226),
+                        dropdownColor: Colors.white,
+                        value: dropdownIncome,
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownIncome = newValue!;
+                          });
+                        },
+                        items: <String>[
+                          'Bachelors',
+                          'Yes',
+                        ].map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(
+                              value,
+                            ),
+                          );
+                        }).toList(),
                       ),
                       const SizedBox(height: 20),
                       TextFormField(
@@ -291,43 +308,43 @@ class _P_DetailState extends State<P_Detail> {
                           labelText: "Occupation",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
+                          fillColor: Colors.white,
                         ),
                         readOnly: true,
                       ),
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "12,00,000",
+                        initialValue: "₹ 12,00,000",
                         decoration: const InputDecoration(
                           labelText: "Annual Income",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
+                          fillColor: Colors.white,
                         ),
                         readOnly: true,
                       ),
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "ABCDE1234A",
+                        initialValue: "AAAPB1234M",
                         decoration: const InputDecoration(
                           labelText: "Pan Number",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
+                          fillColor: Colors.white,
                         ),
                         readOnly: true,
                       ),
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "enter product name",
+                        initialValue: "Nischit Samrudhi",
                         decoration: const InputDecoration(
                           labelText: "Product",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
-                          fillColor: Color(0xFFF5F5F5),
+                          fillColor: Colors.white,
                         ),
                         readOnly: true,
                       ),
@@ -338,19 +355,13 @@ class _P_DetailState extends State<P_Detail> {
               const SizedBox(height: 20),
               Center(
                 child: Align(
-                  alignment: Alignment.bottomCenter,
+                  alignment: Alignment.center,
                   child: Container(
-                    width: 420,
+                    width: 460,
                     height: 40,
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Quate_General(),
-                            ));
-                      },
-                      child: const Text("Submit"),
+                      onPressed: () {},
+                      child: const Text("Next"),
                     ),
                   ),
                 ),

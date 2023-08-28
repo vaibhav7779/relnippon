@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:reliance_demo/1Eypage.dart';
-import 'package:reliance_demo/6thpage.dart';
+
+import '6thpage.dart';
+import 'Pimage.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/approval.dart';
 // import 'package:sar/pages/loanSummary.dart';
@@ -182,7 +184,7 @@ class _Comp_RecordingState extends State<Comp_Recording> {
                                   builder: (context) => Lapsed_Policies(),
                                 ));
                           },
-                          child: const Text("Back "),
+                          child: const Text("Again "),
                         ),
                       ),
                     ),
@@ -199,10 +201,12 @@ class _Comp_RecordingState extends State<Comp_Recording> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => EY_Page(),
+                                  builder: (context) => EY_Page(
+                                    nextPage: '',
+                                  ),
                                 ));
                           },
-                          child: const Text("Next"),
+                          child: const Text("Submit"),
                         ),
                       ),
                     ),

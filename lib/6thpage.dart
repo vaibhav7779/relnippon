@@ -54,7 +54,6 @@ class Lapsed_policies extends State<Lapsed_Policies> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 28),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
@@ -187,7 +186,6 @@ class Lapsed_policies extends State<Lapsed_Policies> {
                     ),
                   ),
                 ),
-                
                 const SizedBox(height: 28),
                 Card(
                   shape: RoundedRectangleBorder(
