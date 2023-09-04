@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:reliance_demo/1Eypage.dart';
-import 'package:reliance_demo/6thpage.dart';
 import 'package:reliance_demo/recording.dart';
+
+import '6thpage.dart';
+import 'Position_your_face.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/approval.dart';
 // import 'package:sar/pages/loanSummary.dart';
@@ -207,10 +209,10 @@ class _H_QuestionState extends State<H_Question> {
               Row(
                 children: [
                   Checkbox(
-                    value: detailsRadio,
+                    value: check1,
                     onChanged: (value) {
                       setState(() {
-                        detailsRadio = value!;
+                        check1 = value!;
                       });
                     },
                   ),
@@ -242,10 +244,10 @@ class _H_QuestionState extends State<H_Question> {
               Row(
                 children: [
                   Checkbox(
-                    value: detailsRadio,
+                    value: check2,
                     onChanged: (value) {
                       setState(() {
-                        detailsRadio = value!;
+                        check2 = value!;
                       });
                     },
                   ),
@@ -532,7 +534,7 @@ class _H_QuestionState extends State<H_Question> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Lapsed_Policies(),
+                                  builder: (context) => Face_Pos(),
                                 ));
                           },
                           child: const Text("Back "),

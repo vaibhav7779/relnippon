@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '1Eypage.dart';
 import '5thpage.dart';
+import 'Request_co_browsing.dart';
 
 bool isChecked = false;
 
@@ -359,7 +360,7 @@ class _TpState extends State<Tp> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => EY_Page(),
+                          builder: (context) => Request_Co_B(),
                         ));
                   },
                   child: Text("Confirm Details and Process "),

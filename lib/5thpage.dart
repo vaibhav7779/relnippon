@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reliance_demo/1Eypage.dart';
-import 'package:reliance_demo/6thpage.dart';
+
+import 'Leader_board.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/approval.dart';
 // import 'package:sar/pages/loanSummary.dart';
@@ -141,7 +142,7 @@ class _REcom_ProdState extends State<REcom_Prod> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Lapsed_Policies(),
+                              builder: (context) => Leader_Board(),
                             ));
                       },
                       child: const Text("instant quate"),
@@ -149,8 +150,6 @@ class _REcom_ProdState extends State<REcom_Prod> {
                   ),
                 ),
               ),
-                
-
             ],
           ),
         ),

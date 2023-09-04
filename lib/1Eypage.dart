@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:reliance_demo/personal_detail.dart';
 
+import '6thpage.dart';
 import 'main.dart';
 
 class EY_Page extends StatefulWidget {
-  const EY_Page({super.key});
+  const EY_Page({super.key, required String nextPage});
 
   @override
   State<EY_Page> createState() => _EY_PageState();
@@ -65,20 +67,31 @@ class _EY_PageState extends State<EY_Page> {
                   ),
                 ),
               ),
-              Center(
-                child: Stack(
-                  children: <Widget>[
-                    Container(
-                      alignment: Alignment.center,
-                      child: Image.asset(
-                        'assets/OIP 1.png',
-                        height: 141,
-                        width: 141,
-                        fit: BoxFit.cover,
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(1.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const P_Detail(),
+                          ),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 160.0),
+                        child: Image.asset(
+                          "assets/OIP 1.png",
+                          fit: BoxFit.cover,
+                          width: 141,
+                          height: 141,
+                        ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

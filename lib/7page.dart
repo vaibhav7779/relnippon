@@ -68,7 +68,7 @@ class _Notification_pageState extends State<Notification_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
                             Text(
-                              "4  New needs customer have been added",
+                              "4  New needs customer have been added  ",
                               style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   color: Colors.black),
@@ -83,7 +83,7 @@ class _Notification_pageState extends State<Notification_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
                             Text(
-                              "2  Applicarion froms have pending CFR",
+                              "2  Applicarion froms have pending CFR      ",
                               style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   color: Colors.black),
@@ -98,7 +98,7 @@ class _Notification_pageState extends State<Notification_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
                             Text(
-                              "1    Policy  issued  on  monday              ",
+                              "1    Policy  issued  on  monday                    ",
                               style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   color: Colors.black),

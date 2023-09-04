@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reliance_demo/1Eypage.dart';
-import 'package:reliance_demo/6thpage.dart';
 
+import '6thpage.dart';
 import 'complete_record.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/approval.dart';

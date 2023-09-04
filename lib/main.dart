@@ -4,18 +4,35 @@ import 'package:reliance_demo/1Eypage.dart';
 import 'package:reliance_demo/personal_detail.dart';
 import 'package:reliance_demo/pre_issuance_verifi.dart';
 import 'package:reliance_demo/recording.dart';
+import 'package:reliance_demo/switching_customer.dart';
 
 import 'package:reliance_demo/tp.dart';
 
+import '2co-browsing.dart';
+import '2switching_back.dart';
+import '3co_browsing.dart';
 import '5thpage.dart';
-import '6thpage.dart';
 import '7page.dart';
 import '8page.dart';
+import 'AA_pvt.dart';
+import 'Document_uplode.dart';
+import 'Finnance_detail.dart';
+import 'Last_personal_detail.dart';
+import 'Leader_board.dart';
+import 'Life_assured.dart';
+import 'Pimage.dart';
 import 'Position_your_face.dart';
+import 'Quote_Generation.dart';
+import 'ROtp.dart';
+import 'Request_co_browsing.dart';
+import 'Thankyou.dart';
+import 'Your_Appli_No.dart';
 import 'choosemethod1.dart';
 import 'complete_record.dart';
+import 'dot.dart';
+import 'fetch_income.dart';
 import 'healthquestion.dart';
-import 'image.dart';
+import 'mob_view.dart';
 
 // import 'package:flutter_application_1/pages/address.dart';
 // import 'package:flutter_application_1/pages/home.dart';
@@ -48,18 +65,34 @@ class _MyAppState extends State<MyApp> {
         textSelectionTheme: TextSelectionThemeData(
           cursorColor: Colors.pink,
         ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
+       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 7, 52, 175),
+            backgroundColor: Color.fromARGB(255, 9, 60, 203),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           ),
-        ),
+        ), 
         unselectedWidgetColor: Color.fromARGB(255, 219, 140, 21),
         checkboxTheme: CheckboxThemeData(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
           fillColor: MaterialStateColor.resolveWith(
             (states) => Color.fromARGB(255, 223, 138, 27),
+          ),
+        ),
+
+        inputDecorationTheme: const InputDecorationTheme(
+          isDense: true,
+          contentPadding: EdgeInsets.fromLTRB(10, 18, 10, 18),
+          filled: false,
+          labelStyle: TextStyle(
+            color: Color(0xFFBABABA),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black),
+            borderRadius: BorderRadius.all(Radius.circular(8)),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
         ),
 
@@ -84,23 +117,7 @@ class _MyAppState extends State<MyApp> {
               (states) => Colors.blue.withOpacity(0.1)), // Color when pressed
           splashRadius: 16.0, // Size of the ripple effect when pressed
         ),
-        inputDecorationTheme: InputDecorationTheme(
-          hintStyle: TextStyle(fontSize: 25, color: Colors.red),
-          enabledBorder: new OutlineInputBorder(
-            borderRadius: new BorderRadius.circular(15.0),
-            borderSide: new BorderSide(
-              color: const Color.fromARGB(255, 1, 1, 1),
-            ),
-          ),
-          focusedBorder: new OutlineInputBorder(
-            borderRadius: new BorderRadius.circular(25.0),
-            borderSide: new BorderSide(
-              color: Color.fromARGB(255, 0, 0, 0),
-            ),
-          ),
-          labelStyle: new TextStyle(
-              color: Color.fromARGB(255, 19, 19, 19), fontSize: 10),
-        ),
+
         appBarTheme: AppBarTheme(
             backgroundColor: Color.fromARGB(255, 4, 63, 227),
             centerTitle: false),
