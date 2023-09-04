@@ -23,6 +23,7 @@ import 'Life_assured.dart';
 import 'Pimage.dart';
 import 'Position_your_face.dart';
 import 'Quote_Generation.dart';
+import 'ROtp.dart';
 import 'Request_co_browsing.dart';
 import 'Thankyou.dart';
 import 'Your_Appli_No.dart';
@@ -59,18 +60,18 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Life_Assured(),
+      home: IncomeVerification(),
       theme: ThemeData(
         textSelectionTheme: TextSelectionThemeData(
           cursorColor: Colors.pink,
         ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
+       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: Color.fromARGB(255, 9, 60, 203),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           ),
-        ),
+        ), 
         unselectedWidgetColor: Color.fromARGB(255, 219, 140, 21),
         checkboxTheme: CheckboxThemeData(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
